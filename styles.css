@@ -55,14 +55,21 @@ select:focus {
   color: #fff;
   padding: 20px;
   border-radius: 5px;
-  transition: all 1s ease-in-out;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.text-box.show {
+  transform: translate(-50%, 0);
+  opacity: 1;
 }
 
 .text-box select {
   background-color: darksalmon;
+  border-radius: 4px;
   border: 0;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   height: 30px;
   width: 100%;
 }
@@ -103,20 +110,20 @@ main {
   transition: box-shadow 0.2s ease-out;
 }
 
-.box.active{
-    box-shadow: 0 0 10px 5px darksalmon;
+.box.active {
+  box-shadow: 0 0 10px 5px darksalmon;
 }
 
-.box .info{
-    background-color: darksalmon;
-    color: #fff;
-    font-size: 18px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 10px;
-    text-align: center;
-    height: 100%;
+.box .info {
+  background-color: darksalmon;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  height: 100%;
 }
 
 .box img {
@@ -125,20 +132,20 @@ main {
   height: 200px;
 }
 
-@media(max-width: 1100px){
-    main{
-        grid-template-columns: repeat(3, 1fr);
-    }
+@media (max-width: 1100px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-@media(max-width: 760px){
-    main{
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (max-width: 760px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media(max-width: 500px){
-    main{
-        grid-template-columns: repeat(1, 1fr);
-    }
+@media (max-width: 500px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
